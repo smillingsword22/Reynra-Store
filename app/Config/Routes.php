@@ -8,3 +8,5 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Login::index');
 $routes->post('login', 'Login::doLogin');
 $routes->get('logout', 'Login::logout');
+
+$routes->get('/dashboard', 'Home::index');
