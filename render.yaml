@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: reynra-store
+    runtime: php
+    plan: free
+    buildCommand: ""
+    startCommand: ""
+    rootDir: public
+    envVars:
+      - key: CI_ENVIRONMENT
+        value: production
