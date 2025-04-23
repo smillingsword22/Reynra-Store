@@ -51,6 +51,24 @@ class Home extends BaseController
         $extraKeuntungan = $totalKeuntungan - $previousData['keuntungan'];
         $extraPengeluaran = $totalPengeluaran - $previousData['pengeluaran'];
 
+        // Data history 10 terakhir (gabung dari 2 tabel)
+        $riwayatPenjualan = $this->penjualanModel->select("'penjualan' as jenis, total as jumlah, tanggal")
+            ->orderBy('tanggal', 'DESC')
+            ->findAll(10);
+
+        $riwayatPengeluaran = $this->pengeluaranModel->select("'pengeluaran' as jenis, jumlah, tanggal")
+            ->orderBy('tanggal', 'DESC')
+            ->findAll(10);
+        
+        // Gabung dan urutkan berdasarkan tanggal
+        $riwayatGabung = array_merge($riwayatPenjualan, $riwayatPengeluaran);
+        usort($riwayatGabung, function ($a, $b) {
+            return strtotime($b['tanggal']) - strtotime($a['tanggal']);
+        });
+
+        // Ambil 10 terbaru
+        $riwayatGabung = array_slice($riwayatGabung, 0, 10);
+
         return view('dashboard_view', [
             'totalPenjualan' => $totalPenjualan,
             'totalKeuntungan' => $totalKeuntungan,
@@ -61,7 +79,8 @@ class Home extends BaseController
             'persenPengeluaran' => $persenPengeluaran,
             'extraPenjualan' => $extraPenjualan,
             'extraKeuntungan' => $extraKeuntungan,
-            'extraPengeluaran' => $extraPengeluaran
+            'extraPengeluaran' => $extraPengeluaran,
+            'riwayat' => $riwayatGabung
         ]);
     }
 
@@ -114,5 +133,91 @@ class Home extends BaseController
             'keuntungan' => $previousKeuntungan,
             'pengeluaran' => $previousPengeluaran
         ];
+    }
+
+    public function getData()
+    {
+        $type = $this->request->getGet('type'); // 'month' or 'year'
+
+        $db = \Config\Database::connect();
+
+        if ($type === 'month') {
+            // Ambil data penjualan per hari bulan ini
+            $builder = $db->table('penjualan')
+                ->select("DAY(tanggal) as label, SUM(total) as total, SUM(keuntungan) as keuntungan")
+                ->where("MONTH(tanggal)", date('m'))
+                ->where("YEAR(tanggal)", date('Y'))
+                ->groupBy("DAY(tanggal)")
+                ->orderBy("DAY(tanggal)");
+
+            $penjualanData = $builder->get()->getResultArray();
+
+            $pengeluaranData = $db->table('pengeluaran')
+                ->select("DAY(tanggal) as label, SUM(jumlah) as jumlah")
+                ->where("MONTH(tanggal)", date('m'))
+                ->where("YEAR(tanggal)", date('Y'))
+                ->groupBy("DAY(tanggal)")
+                ->orderBy("DAY(tanggal)")
+                ->get()->getResultArray();
+
+        } else {
+            // Ambil data per bulan di tahun ini
+            $builder = $db->table('penjualan')
+                ->select("MONTH(tanggal) as label, SUM(total) as total, SUM(keuntungan) as keuntungan")
+                ->where("YEAR(tanggal)", date('Y'))
+                ->groupBy("MONTH(tanggal)")
+                ->orderBy("MONTH(tanggal)");
+
+            $penjualanData = $builder->get()->getResultArray();
+
+            $pengeluaranData = $db->table('pengeluaran')
+                ->select("MONTH(tanggal) as label, SUM(jumlah) as jumlah")
+                ->where("YEAR(tanggal)", date('Y'))
+                ->groupBy("MONTH(tanggal)")
+                ->orderBy("MONTH(tanggal)")
+                ->get()->getResultArray();
+        }
+
+        // Format ulang data biar urut dan rapi
+        $labels = [];
+        $penjualan = [];
+        $keuntungan = [];
+        $pengeluaran = [];
+
+        if ($type === 'month') {
+            $days = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));
+            for ($i = 1; $i <= $days; $i++) {
+                $labels[] = "Tgl " . $i;
+                $penjualan[] = (int) ($this->findValue($penjualanData, $i, 'total'));
+                $keuntungan[] = (int) ($this->findValue($penjualanData, $i, 'keuntungan'));
+                $pengeluaran[] = (int) ($this->findValue($pengeluaranData, $i, 'jumlah'));
+            }
+        } else {
+            for ($i = 1; $i <= 12; $i++) {
+                $labels[] = date('M', mktime(0, 0, 0, $i, 10)); // Jan, Feb, dst
+                $penjualan[] = (int) ($this->findValue($penjualanData, $i, 'total'));
+                $keuntungan[] = (int) ($this->findValue($penjualanData, $i, 'keuntungan'));
+                $pengeluaran[] = (int) ($this->findValue($pengeluaranData, $i, 'jumlah'));
+            }
+        }
+
+        return $this->response->setJSON([
+            'labels' => $labels,
+            'series' => [
+                ['name' => 'Penjualan', 'data' => $penjualan],
+                ['name' => 'Pengeluaran', 'data' => $pengeluaran],
+                ['name' => 'Keuntungan', 'data' => $keuntungan],
+            ]
+        ]);
+    }
+
+    private function findValue($data, $label, $field)
+    {
+        foreach ($data as $row) {
+            if ((int) $row['label'] === $label) {
+                return $row[$field];
+            }
+        }
+        return 0;
     }
 }

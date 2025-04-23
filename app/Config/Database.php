@@ -28,9 +28,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '123',
+        'hostname'     => 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com',
+        'username'     => '39LQWGFwWagZrKc.root',
+        'password'     => 'KpZ9Gg7JrQZXFj9D',
         'database'     => 'db_reynra_store',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
@@ -39,11 +39,13 @@ class Database extends Config
         'charset'      => 'utf8',
         'DBCollat'     => 'utf8_general_ci',
         'swapPre'      => '',
-        'encrypt'      => false,
+        'encrypt'      => [
+            'ssl_ca' => WRITEPATH . 'certs/isrgrootx1.pem',
+        ],
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 4000,
         'numberNative' => false,
     ];
 

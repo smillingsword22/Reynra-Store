@@ -34,4 +34,7 @@ $routes->group('transaksi', function($routes) {
     $routes->post('pengeluaran/store', 'Transaksi\Pengeluaran::store');
 });
 
+$routes->get('/grafik-data', 'Home::getData');
+
+
 
