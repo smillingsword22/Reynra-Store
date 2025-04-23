@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://f7d3b85e-dac1-4319-8f40-6c64d2ad3f6d-00-3nq0z3cjfioal.sisko.repl.co/';
+    public string $baseURL = 'http://localhost/reynra-store/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

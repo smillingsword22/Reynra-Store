@@ -16,6 +16,7 @@ class Penjualan extends BaseController
     public function __construct()
     {
         // Load models
+        $this->db = \Config\Database::connect();
         $this->penjualanModel = new PenjualanModel();
         $this->detailPenjualanModel = new DetailPenjualanModel();
         $this->produkModel = new ProdukModel();
@@ -131,6 +132,22 @@ class Penjualan extends BaseController
                 ]);
             }
         }
+
+        // Update saldo_store
+        $saldoRow = $this->db->table('saldo_store')->get()->getRow();
+        $saldoLama = $saldoRow ? $saldoRow->saldo : 0;
+        $saldoBaru = $saldoLama + $total - $total_modal;
+
+        // Update saldo_store table
+        $this->db->table('saldo_store')->update(['saldo' => $saldoBaru], ['id' => 1]);
+
+        // Simpan log perubahan saldo (opsional)
+        $this->db->table('log_saldo_store')->insert([
+            'keterangan' => 'Penjualan ID: ' . $penjualan_id,
+            'perubahan' => $total - $total_modal,
+            'saldo_sebelumnya' => $saldoLama,
+            'saldo_setelah' => $saldoBaru,
+        ]);
 
         // Jika berhasil, beri pesan sukses
         return redirect()->back()->with('success', 'Penjualan berhasil disimpan.');

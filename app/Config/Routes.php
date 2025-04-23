@@ -21,7 +21,6 @@ $routes->group('master', function($routes) {
     $routes->post('produk/delete/(:num)', 'Master\Produk::delete/$1');
 });
 
-
 // Transaksi Menu
 
 $routes->group('transaksi', function($routes) {
@@ -33,6 +32,19 @@ $routes->group('transaksi', function($routes) {
     $routes->get('pengeluaran', 'Transaksi\Pengeluaran::index');
     $routes->post('pengeluaran/store', 'Transaksi\Pengeluaran::store');
 });
+
+// Pribadi Menu
+
+$routes->group('pribadi', function($routes) {
+    // Grup untuk transaksi pribadi
+    $routes->get('transaksi', 'Pribadi\Transaksi::index');
+    $routes->get('transaksi/create', 'Pribadi\Transaksi::create');
+    $routes->post('transaksi/store', 'Pribadi\Transaksi::store');
+    $routes->get('transaksi/edit/(:segment)', 'Pribadi\Transaksi::edit/$1');
+    $routes->post('transaksi/update/(:segment)', 'Pribadi\Transaksi::update/$1');
+    $routes->get('transaksi/delete/(:segment)', 'Pribadi\Transaksi::delete/$1');
+});
+
 
 $routes->get('/grafik-data', 'Home::getData');
 

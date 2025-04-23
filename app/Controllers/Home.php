@@ -16,6 +16,7 @@ class Home extends BaseController
 
     public function __construct()
     {
+        $this->db = \Config\Database::connect();
         $this->penjualanModel = new PenjualanModel();
         $this->produkModel = new ProdukModel();
         $this->pengeluaranModel = new PengeluaranModel();
@@ -52,13 +53,15 @@ class Home extends BaseController
         $extraPengeluaran = $totalPengeluaran - $previousData['pengeluaran'];
 
         // Data history 10 terakhir (gabung dari 2 tabel)
-        $riwayatPenjualan = $this->penjualanModel->select("'penjualan' as jenis, total as jumlah, tanggal")
+        $riwayatPenjualan = $this->penjualanModel->select("'penjualan' as jenis, total as jumlah, tanggal, keuntungan")
             ->orderBy('tanggal', 'DESC')
             ->findAll(10);
 
-        $riwayatPengeluaran = $this->pengeluaranModel->select("'pengeluaran' as jenis, jumlah, tanggal")
-            ->orderBy('tanggal', 'DESC')
-            ->findAll(10);
+        $riwayatPengeluaran = $this->pengeluaranModel->select(" 'pengeluaran' AS jenis, jumlah, tanggal, (jumlah * -1) AS keuntungan ")
+                            ->orderBy('tanggal', 'DESC')
+                            ->findAll(10);
+
+
         
         // Gabung dan urutkan berdasarkan tanggal
         $riwayatGabung = array_merge($riwayatPenjualan, $riwayatPengeluaran);
@@ -69,7 +72,13 @@ class Home extends BaseController
         // Ambil 10 terbaru
         $riwayatGabung = array_slice($riwayatGabung, 0, 10);
 
+
+        $saldoToko = $this->db->table('saldo_store')->get()->getRow()->saldo;
+        $saldoPribadi = $this->db->table('saldo_pribadi')->get()->getRow()->saldo;; // Misalnya saldo pribadi bisa disesuaikan dari data lainnya
+
         return view('dashboard_view', [
+            'saldoToko' => $saldoToko,
+            'saldoPribadi' => $saldoPribadi,
             'totalPenjualan' => $totalPenjualan,
             'totalKeuntungan' => $totalKeuntungan,
             'jumlahProdukTerjual' => $jumlahProdukTerjual,

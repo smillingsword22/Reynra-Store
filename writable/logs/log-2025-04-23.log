@@ -1,0 +1,421 @@
+INFO - 2025-04-23 15:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 15:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 15:34:17 --> ErrorException: Undefined variable: saldoToko
+in APPPATH\Views\dashboard_view.php on line 31.
+ 1 APPPATH\Views\dashboard_view.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: saldoToko', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\dashboard_view.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\dashboard_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 5 APPPATH\Controllers\Home.php(83): view('dashboard_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:35:12 --> ErrorException: Undefined property: App\Controllers\Home::$db
+in APPPATH\Controllers\Home.php on line 72.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$db', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Home.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:35:23 --> ErrorException: Undefined property: App\Controllers\Home::$db
+in APPPATH\Controllers\Home.php on line 72.
+ 1 APPPATH\Controllers\Home.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$db', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Home.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:40:00 --> ErrorException: Undefined index: keuntungan
+in APPPATH\Views\dashboard_view.php on line 158.
+ 1 APPPATH\Views\dashboard_view.php(158): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: keuntungan', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\dashboard_view.php', 158, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\dashboard_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 5 APPPATH\Controllers\Home.php(89): view('dashboard_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:42:32 --> ParseError: syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+in APPPATH\Controllers\Home.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-23 15:42:57 --> mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list' in C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 'pengelu...', 0)
+#1 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 'pengelu...')
+#2 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 'pengelu...')
+#3 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 'pengelu...', Array, false)
+#4 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\xampp\htdocs\reynra-store\app\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+#7 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\reynra-store\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-23 15:42:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 4 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:42:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 6 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:42:57 --> [Caused by] mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' as jenis, `jumlah`, `tanggal`, `jumlah * -1` as `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 7 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-23 15:43:36 --> mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list' in C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 'pengelu...', 0)
+#1 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 'pengelu...')
+#2 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 'pengelu...')
+#3 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 'pengelu...', Array, false)
+#4 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\xampp\htdocs\reynra-store\app\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+#7 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\reynra-store\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-23 15:43:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 4 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:43:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 6 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:43:36 --> [Caused by] mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 7 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-23 15:43:39 --> mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list' in C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 'pengelu...', 0)
+#1 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 'pengelu...')
+#2 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 'pengelu...')
+#3 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 'pengelu...', Array, false)
+#4 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\xampp\htdocs\reynra-store\app\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+#7 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\reynra-store\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\reynra-store\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-23 15:43:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 4 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:43:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 6 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:43:39 --> [Caused by] mysqli_sql_exception: Unknown column 'jumlah * -1' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT \'pengeluaran\' AS jenis, `jumlah`, `tanggal`, `jumlah * -1` AS `keuntungan`
+FROM `pengeluaran`
+ORDER BY `tanggal` DESC
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(10, 0)
+ 7 APPPATH\Controllers\Home.php(62): CodeIgniter\BaseModel->findAll(10)
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 15:43:59 --> ErrorException: Undefined variable: riwayatPengeluaran
+in APPPATH\Controllers\Home.php on line 67.
+ 1 APPPATH\Controllers\Home.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: riwayatPengeluaran', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Home.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 16:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 16:44:40 --> Error: Class 'App\Controllers\Pribadi\BaseController' not found
+in APPPATH\Controllers\Pribadi\Transaksi.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Pribadi\\Transaksi.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pribadi\\Transaksi')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pribadi\\Transaksi')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Pribadi\\Transaksi')
+ 6 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\Pribadi\\Transaksi', true)
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 16:44:54 --> ErrorException: Undefined variable: pengeluaran
+in APPPATH\Views\pribadi\transaksi\index.php on line 45.
+ 1 APPPATH\Views\pribadi\transaksi\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pengeluaran', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pribadi/transaksi/index', [], true)
+ 5 APPPATH\Controllers\Pribadi\Transaksi.php(27): view('pribadi/transaksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 16:52:00 --> ErrorException: Undefined property: App\Controllers\Pribadi\Transaksi::$pengeluaranModel
+in APPPATH\Controllers\Pribadi\Transaksi.php on line 25.
+ 1 APPPATH\Controllers\Pribadi\Transaksi.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Pribadi\\Transaksi::$pengeluaranModel', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Pribadi\\Transaksi.php', 25, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 16:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 16:52:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "transaksi/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('transaksi/create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('transaksi/create', [], true)
+ 3 APPPATH\Controllers\Pribadi\Transaksi.php(37): view('transaksi/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->create()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 16:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 16:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 16:58:57 --> ErrorException: Undefined variable: kategori_transaksi
+in APPPATH\Views\pribadi\transaksi\index.php on line 106.
+ 1 APPPATH\Views\pribadi\transaksi\index.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kategori_transaksi', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php', 106, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pribadi/transaksi/index', [], true)
+ 5 APPPATH\Controllers\Pribadi\Transaksi.php(27): view('pribadi/transaksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 17:00:00 --> ErrorException: Undefined property: App\Controllers\Pribadi\Transaksi::$kategoriTransaksiModel
+in APPPATH\Controllers\Pribadi\Transaksi.php on line 28.
+ 1 APPPATH\Controllers\Pribadi\Transaksi.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Pribadi\\Transaksi::$kategoriTransaksiModel', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Pribadi\\Transaksi.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 17:00:16 --> ErrorException: Undefined property: App\Controllers\Pribadi\Transaksi::$saldoPribadiModel
+in APPPATH\Controllers\Pribadi\Transaksi.php on line 31.
+ 1 APPPATH\Controllers\Pribadi\Transaksi.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Pribadi\\Transaksi::$saldoPribadiModel', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Pribadi\\Transaksi.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 17:00:18 --> ErrorException: Undefined property: App\Controllers\Pribadi\Transaksi::$saldoPribadiModel
+in APPPATH\Controllers\Pribadi\Transaksi.php on line 31.
+ 1 APPPATH\Controllers\Pribadi\Transaksi.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Pribadi\\Transaksi::$saldoPribadiModel', 'C:\\xampp\\htdocs\\reynra-store\\app\\Controllers\\Pribadi\\Transaksi.php', 31, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 17:01:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "transaksi/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('transaksi/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('transaksi/index', [], true)
+ 3 APPPATH\Controllers\Pribadi\Transaksi.php(38): view('transaksi/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 17:07:29 --> ErrorException: Undefined index: id_transaksi
+in APPPATH\Views\pribadi\transaksi\index.php on line 66.
+ 1 APPPATH\Views\pribadi\transaksi\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_transaksi', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php', 66, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pribadi/transaksi/index', [], true)
+ 5 APPPATH\Controllers\Pribadi\Transaksi.php(38): view('pribadi/transaksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-23 17:07:52 --> ErrorException: Undefined index: deskripsi
+in APPPATH\Views\pribadi\transaksi\index.php on line 67.
+ 1 APPPATH\Views\pribadi\transaksi\index.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: deskripsi', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php', 67, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pribadi/transaksi/index', [], true)
+ 5 APPPATH\Controllers\Pribadi\Transaksi.php(38): view('pribadi/transaksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 17:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-23 17:08:42 --> ErrorException: Undefined index: nama
+in APPPATH\Views\pribadi\transaksi\index.php on line 67.
+ 1 APPPATH\Views\pribadi\transaksi\index.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama', 'C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php', 67, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\reynra-store\\app\\Views\\pribadi\\transaksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pribadi/transaksi/index', [], true)
+ 5 APPPATH\Controllers\Pribadi\Transaksi.php(38): view('pribadi/transaksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Pribadi\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pribadi\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-23 17:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 17:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

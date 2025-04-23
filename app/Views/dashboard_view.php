@@ -13,126 +13,161 @@
   <?= view('layouts/layout-vertical') ?>
 
   <!-- [Main Content] start -->
-  <div class="pc-container">
-    <div class="pc-content">
+<div class="pc-container">
+  <div class="pc-content">
 
-      <?= view('layouts/breadcrumb', [
-        'breadcrumb_item' => 'Dashboard',
-        'breadcrumb_item_active' => 'Admin'
-      ]) ?>
+    <?= view('layouts/breadcrumb', [
+      'breadcrumb_item' => 'Dashboard',
+      'breadcrumb_item_active' => 'Admin'
+    ]) ?>
 
-      <div class="row">
-        <!-- [Total Penjualan] -->
-        <div class="col-md-6 col-xl-3">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="mb-2 f-w-400 text-muted">Total Penjualan</h6>
-              <h4 class="mb-3">
-                Rp<?= number_format($totalPenjualan, 0, ',', '.') ?>
-                <span class="badge bg-light-primary border border-primary">
-                  <i class="ti ti-trending-up"></i> <?= $persenPenjualan ?>%
-                </span>
-              </h4>
-              <p class="mb-0 text-muted text-sm">
-                You made an extra 
-                <span class="text-primary"><?= number_format($extraPenjualan, 0, ',', '.') ?></span> this year
-              </p>
-            </div>
+    <div class="row">
+      <!-- [Saldo Toko] -->
+      <div class="col-md-6 col-xl-6 py-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Saldo Toko</h6>
+            <h4 class="mb-3">
+              Rp<?= number_format($saldoToko, 0, ',', '.') ?>
+            </h4>
+            <p class="mb-0 text-muted text-sm">
+              Saldo toko saat ini
+            </p>
           </div>
         </div>
+      </div>
 
-        <!-- [Total Keuntungan] -->
-        <div class="col-md-6 col-xl-3">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="mb-2 f-w-400 text-muted">Total Keuntungan</h6>
-              <h4 class="mb-3">
-                Rp<?= number_format($totalKeuntungan, 0, ',', '.') ?>
-                <span class="badge bg-light-success border border-success">
-                  <i class="ti ti-trending-up"></i> <?= $persenKeuntungan ?>%
-                </span>
-              </h4>
-              <p class="mb-0 text-muted text-sm">
-                You made an extra 
-                <span class="text-success"><?= number_format($extraKeuntungan, 0, ',', '.') ?></span> this year
-              </p>
-            </div>
+      <!-- [Saldo Pribadi] -->
+      <div class="col-md-6 col-xl-6 py-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Saldo Pribadi</h6>
+            <h4 class="mb-3">
+              Rp<?= number_format($saldoPribadi, 0, ',', '.') ?>
+            </h4>
+            <p class="mb-0 text-muted text-sm">
+              Saldo pribadi saat ini
+            </p>
           </div>
         </div>
+      </div>
 
-        <!-- [Jumlah Produk Terjual] -->
-        <div class="col-md-6 col-xl-3">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="mb-2 f-w-400 text-muted">Jumlah Produk Terjual</h6>
-              <h4 class="mb-3">
-                <?= $jumlahProdukTerjual ?> Produk
-              </h4>
-            </div>
+      <!-- [Total Penjualan] -->
+      <div class="col-md-6 col-xl-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Total Penjualan</h6>
+            <h4 class="mb-3">
+              Rp<?= number_format($totalPenjualan, 0, ',', '.') ?>
+              <span class="badge bg-light-primary border border-primary">
+                <i class="ti ti-trending-up"></i> <?= $persenPenjualan ?>%
+              </span>
+            </h4>
+            <p class="mb-0 text-muted text-sm">
+              You made an extra 
+              <span class="text-primary"><?= number_format($extraPenjualan, 0, ',', '.') ?></span> this year
+            </p>
           </div>
         </div>
+      </div>
 
-        <!-- [Total Pengeluaran] -->
-        <div class="col-md-6 col-xl-3">
-          <div class="card h-100">
-            <div class="card-body">
-              <h6 class="mb-2 f-w-400 text-muted">Total Pengeluaran</h6>
-              <h4 class="mb-3">
-                Rp<?= number_format($totalPengeluaran, 0, ',', '.') ?>
-                <span class="badge bg-light-danger border border-danger">
-                  <i class="ti ti-trending-down"></i> <?= $persenPengeluaran ?>%
-                </span>
-              </h4>
-              <p class="mb-0 text-muted text-sm">
-                You made an extra 
-                <span class="text-danger"><?= number_format($extraPengeluaran, 0, ',', '.') ?></span> this year
-              </p>
-            </div>
+      <!-- [Total Keuntungan] -->
+      <div class="col-md-6 col-xl-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Total Keuntungan</h6>
+            <h4 class="mb-3">
+              Rp<?= number_format($totalKeuntungan, 0, ',', '.') ?>
+              <span class="badge bg-light-success border border-success">
+                <i class="ti ti-trending-up"></i> <?= $persenKeuntungan ?>%
+              </span>
+            </h4>
+            <p class="mb-0 text-muted text-sm">
+              You made an extra 
+              <span class="text-success"><?= number_format($extraKeuntungan, 0, ',', '.') ?></span> this year
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-xl-8 py-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h5 class="mb-0">Grafik Keuangan</h5>
-                  <div>
-                    <button class="btn btn-sm btn-outline-primary me-2" onclick="loadChart('month')">Sebulan</button>
-                    <button class="btn btn-sm btn-outline-secondary" onclick="loadChart('year')">Setahun</button>
-                  </div>
-                </div>
-                <div id="grafikKeuangan" style="height: 350px;"></div>
+      </div>
+
+      <!-- [Jumlah Produk Terjual] -->
+      <div class="col-md-6 col-xl-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Jumlah Produk Terjual</h6>
+            <h4 class="mb-3">
+              <?= $jumlahProdukTerjual ?> Produk
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- [Total Pengeluaran] -->
+      <div class="col-md-6 col-xl-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6 class="mb-2 f-w-400 text-muted">Total Pengeluaran</h6>
+            <h4 class="mb-3">
+              Rp<?= number_format($totalPengeluaran, 0, ',', '.') ?>
+              <span class="badge bg-light-danger border border-danger">
+                <i class="ti ti-trending-down"></i> <?= $persenPengeluaran ?>%
+              </span>
+            </h4>
+            <p class="mb-0 text-muted text-sm">
+              You made an extra 
+              <span class="text-danger"><?= number_format($extraPengeluaran, 0, ',', '.') ?></span> this year
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- row -->
+
+    <!-- Grafik Keuangan dan Aktivitas Terbaru -->
+
+    <div class="row">
+      <div class="col-md-12 col-xl-8 py-4">
+        <h5 class="mb-3">Grafik Keuangan</h5>
+        <div class="card mb-2">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="mb-0">Keuangan</h5>
+              <div>
+                <button class="btn btn-sm btn-outline-primary me-2" onclick="loadChart('month')">Sebulan</button>
+                <button class="btn btn-sm btn-outline-secondary" onclick="loadChart('year')">Setahun</button>
               </div>
             </div>
-          </div>
-          <div class="col-md-12 col-xl-4 py-4">
-            <h5 class="mb-3">Aktivitas Terbaru</h5>
-          <?php foreach ($riwayat as $item): ?>
-            <div class="card mb-2">
-              <div class="card-body d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                  <div class="me-3">
-                    <i class="ti <?= $item['jenis'] == 'penjualan' ? 'ti-arrow-up-right text-success' : 'ti-arrow-down-right text-danger' ?> fs-4"></i>
-                  </div>
-                  <div>
-                    <h6 class="mb-0"><?= ucfirst($item['jenis']) ?></h6>
-                    <small class="text-muted">Rp<?= number_format($item['jumlah'], 0, ',', '.') ?> - <?= date('d M Y', strtotime($item['tanggal'])) ?></small>
-                  </div>
-                </div>
-                <span class="badge <?= $item['jenis'] == 'penjualan' ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger' ?>">
-                  <?= $item['jenis'] == 'penjualan' ? '+' : '-' ?>Rp<?= number_format($item['jumlah'], 0, ',', '.') ?>
-                </span>
-              </div>
-            </div>
-          <?php endforeach; ?>
+            <div id="grafikKeuangan" style="height: 350px;"></div>
           </div>
         </div>
+      </div>
+      <div class="col-md-12 col-xl-4 py-4">
+        <h5 class="mb-3">Aktivitas Terbaru</h5>
+        <?php foreach ($riwayat as $item): ?>
+          <div class="card mb-2">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <i class="ti <?= $item['jenis'] == 'penjualan' ? 'ti-arrow-up-right text-success' : 'ti-arrow-down-right text-danger' ?> fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0"><?= ucfirst($item['jenis']) ?></h6>
+                  <small class="text-muted">Rp<?= number_format($item['jumlah'], 0, ',', '.') ?> - <?= date('d M Y', strtotime($item['tanggal'])) ?></small>
+                </div>
+              </div>
+              <span class="badge <?= $item['jenis'] == 'penjualan' ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger' ?>">
+                <?= $item['jenis'] == 'penjualan' ? '+' : '-' ?>Rp<?= number_format($item['keuntungan'], 0, ',', '.') ?>
+              </span>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
 
+  </div> <!-- pc-content -->
+</div> <!-- pc-container -->
+<!-- [Main Content] end -->
 
-      </div> <!-- row -->
-    </div> <!-- pc-content -->
-  </div> <!-- pc-container -->
-  <!-- [Main Content] end -->
 
   <?= view('layouts/footer-block') ?>
 
@@ -192,7 +227,7 @@
 
   <script>
     function loadChart(type) {
-      fetch(`/grafik-data?type=${type}`)
+      fetch(`<?= base_url(); ?>/grafik-data?type=${type}`)
         .then(res => res.json())
         .then(data => {
           if (chart) {

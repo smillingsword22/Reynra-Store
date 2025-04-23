@@ -34,6 +34,31 @@
 </li>
 
 <li class="pc-item pc-caption">
-  <label>Laporan</label>
+  <label>Pribadi</label>
   <i class="ti ti-brand-chrome"></i>
+</li>
+
+<li class="pc-item">
+  <a href="<?= base_url(); ?>pribadi/transaksi" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-arrows-left-right"></i></span>
+    <span class="pc-mtext">Transaksi</span>
+  </a>
+</li>
+<li class="pc-item">
+  <a href="<?= base_url(); ?>pribadi/rencana" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-target"></i></span>
+    <span class="pc-mtext">Rencana</span>
+  </a>
+</li>
+<li class="pc-item">
+  <a href="<?= base_url(); ?>pribadi/tabungan" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-chart-bar"></i></span>
+    <span class="pc-mtext">Tabungan</span>
+  </a>
+</li>
+<li class="pc-item">
+  <a href="<?= base_url(); ?>pribadi/laporan" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-building-bank"></i></span>
+    <span class="pc-mtext">Laporan</span>
+  </a>
 </li>
