@@ -43,6 +43,12 @@ $routes->group('pribadi', function($routes) {
     $routes->get('transaksi/edit/(:segment)', 'Pribadi\Transaksi::edit/$1');
     $routes->post('transaksi/update/(:segment)', 'Pribadi\Transaksi::update/$1');
     $routes->get('transaksi/delete/(:segment)', 'Pribadi\Transaksi::delete/$1');
+
+    $routes->get('rencana', 'Pribadi\Rencana::index');
+    $routes->post('rencana/store', 'Pribadi\Rencana::store');
+    $routes->get('rencana/delete/(:num)', 'Pribadi\Rencana::delete/$1');
+    $routes->get('rencana/edit/(:num)', 'Pribadi\Rencana::edit/$1');
+    $routes->post('rencana/update', 'Pribadi\Rencana::update');
 });
 
 

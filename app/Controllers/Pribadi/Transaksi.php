@@ -23,7 +23,10 @@ class Transaksi extends BaseController
     public function index()
     {
         // Mengambil data transaksi dari database
-        $transaksi = $this->transaksiModel->findAll();
+        $transaksi = $this->transaksiModel
+        ->select('transaksi.*, kategori_transaksi.nama as kategori_nama')
+        ->join('kategori_transaksi', 'kategori_transaksi.id = transaksi.kategori_id')
+        ->findAll();
         
         // Mengambil data kategori transaksi dari database
         $kategori_transaksi = $this->kategoriTransaksiModel->findAll();

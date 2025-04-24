@@ -50,26 +50,33 @@
               <h5>Daftar Transaksi</h5>
             </div>
             <div class="card-body">
-              <table id="pengeluaranTable" class="table table-striped">
-                <thead>
+              <table id="pengeluaranTable" class="table table-bordered table-hover align-middle">
+                <thead class="table-light">
                   <tr>
                     <th>ID Transaksi</th>
-                    <th>Tipe</th>
+                    <th>Kategori</th>
                     <th>Jumlah</th>
                     <th>Tanggal</th>
-                    <th>Action</th>
+                    <th>Tipe</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($transaksi as $item): ?>
                     <tr>
-                      <td><?= $item['id'] ?></td>
-                      <td><?= $item['tipe'] ?></td>
-                      <td>Rp <?= number_format($item['jumlah'], 0, ',', '.') ?></td>
+                      <td><?= esc($item['id']) ?></td>
+                      <td><?= esc($item['kategori_nama']) ?></td>
+                      <td>
+                        <span class="text-<?= $item['tipe'] === 'masuk' ? 'success' : 'danger' ?>">
+                          Rp <?= number_format($item['jumlah'], 0, ',', '.') ?>
+                        </span>
+                      </td>
                       <td><?= date('d M Y', strtotime($item['tanggal'])) ?></td>
                       <td>
-                        <a href="<?= site_url('pribadi/transaksi/edit/'.$item['id']) ?>" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="<?= site_url('pribadi/transaksi/delete/'.$item['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+                        <?php if ($item['tipe'] === 'masuk'): ?>
+                          <span class="badge bg-success">Pemasukan</span>
+                        <?php else: ?>
+                          <span class="badge bg-danger">Pengeluaran</span>
+                        <?php endif; ?>
                       </td>
                     </tr>
                   <?php endforeach; ?>
